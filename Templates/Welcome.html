@@ -1,0 +1,48 @@
+{{define "Welcome"}}
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <div class="display">
+    <h1 class="title">Hangman</h1>
+    <h3>Bienvenue dans le projet HangmanWeb !!!</h3>
+        <div class="welcome">
+            <div class="choix">
+                <p>Choisir une difficulté</p>
+            </div>
+            <div>
+                <form method="post" action="/ChoixMot">
+                    <div>
+                        <div class="diff">
+                            <div class="difficulté">
+                                <input type="radio" id="facile" name="difficulté" value="asset/dico_folder/dico_facile.txt">
+                                <label for="facile">Facile</label>
+                            </div>
+                            <div class="difficulté">
+                                <input type="radio" id="moyen" name="difficulté" value="asset/dico_folder/dico_intermediaire.txt" checked>
+                                <label for="moyen">Moyen</label>
+                            </div>
+                            <div class="difficulté">
+                                <input type="radio" id="difficile" name="difficulté" value="asset/dico_folder/dico_difficile.txt">
+                                <label for="difficile">Difficile</label>
+                            </div>
+                            <div class="nightmare">
+                                <input type="radio" id="nightmare" name="difficulté" value="asset/dico_folder/noms_monstres.txt">
+                                <label for="nightmare">Nightmare</label>
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <input class="submit" type="submit" value="Valider">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+{{end}}
